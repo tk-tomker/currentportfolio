@@ -1,0 +1,218 @@
+
+
+  
+body{
+    background: rgb(0, 7, 20);
+    background-image: url(background.jpg);
+    background-size: cover;
+    color: #e5efff;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+}
+
+ 
+.wrapper{
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 50px;
+    margin-top: 2rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+@keyframes scrollleft{
+    to{
+        left: -200px;
+    }
+}
+
+ .item{
+    width: 200px;
+    height: 50px;
+    
+    position: absolute;
+    left: max(calc(200px * 8), 100%) ;
+    animation-name: scrollleft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ }
+
+.item1{
+    animation-delay: calc(30s / 8 * (8 - 1) * -1 );
+ }
+ .item2{
+    animation-delay: calc(30s / 8 * (8 - 2) * -1 );
+ }
+ .item3{
+    animation-delay: calc(30s / 8 * (8 - 3) * -1 );
+ }
+ .item4{
+    animation-delay: calc(30s / 8 * (8 - 4) * -1 );
+ }
+ .item5{
+    animation-delay: calc(30s / 8 * (8 - 5) * -1 );
+ }
+ .item6{
+    animation-delay: calc(30s / 8 * (8 - 6) * -1 );
+ }
+ .item7{
+    animation-delay: calc(30s / 8 * (8 - 7) * -1 );
+ }
+ .item8{
+    animation-delay: calc(30s / 8 * (8 - 8) * -1 );
+ }
+
+ .fa-brands{
+    font-size: 50px;
+ }
+
+ .fa-sharp,
+ .fa-solid{
+    font-size: 200px;
+ }
+
+ .projects{
+    font-size: 30px;
+ }
+
+ #rfcapp{
+    width: 210px;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+ .bento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .container{
+    
+    width: 1200px;
+    height: 800px;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.row{
+    border-radius: 1em;
+}
+
+.row-1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.row-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.row-3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.col{
+    border-radius: 1em;
+    flex: 1;
+    display: flex;
+    gap: 1em;
+}
+
+.col.col-2{
+    flex:1;
+    display: flex;
+   flex-direction: column;
+}
+
+.col-box{
+    flex: 1;
+    border-radius: 1em; 
+    transition: 0.5 ease-in-out  
+}
+
+.col-box:hover{
+    transform: scale(1.02);
+    border: 2px solid #ffffff10;
+}
+
+.box:hover{
+    transform: scale(1.02);
+    border: 2px solid #ffffff10;
+}
+
+.box{
+    flex: 1;
+    border-radius: 1em;
+}
+
+.col-box{
+    background: rgba(255,255,255,0.15);
+    border: 2px solid #ffffff10;
+    backdrop-filter: blur(50px);
+    text-align: center;
+}
+
+.box{
+    background: rgba(255,255,255,0.15);
+    border: 2px solid #ffffff10;
+    backdrop-filter: blur(50px);
+    transition: 0.5 ease-in-out;
+}
+
+@media(max-width:1024px){
+    .container{
+        flex-direction: column;
+    }
+    .row-1{
+        flex-direction: row;
+    }
+    .row-2{
+        flex-direction: row;
+    }
+    .row-3{
+        flex-direction: row;
+    }
+    .col{
+        flex: 2;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 650px){
+    .container{
+        max-width: 900px;
+        max-height: 550px;
+        gap: 0.5em;
+    }
+    .row{
+        gap:0.5em;
+
+    }
+    .col{
+        gap: 0.5em;
+    }
+}
